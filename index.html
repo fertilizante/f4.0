@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora de Mezcla NPK</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Contenedor para la solicitud de contraseña -->
+  <div id="login-container">
+    <h1>Acceso a la Calculadora de Mezcla NPK</h1>
+    <form id="login-form">
+      <label for="password">Introduce la contraseña:</label>
+      <input type="password" id="password" required>
+      <button type="submit">Ingresar</button>
+    </form>
+    <p id="login-error" class="error-message"></p>
+  </div>
+
+  <!-- Contenedor principal de la aplicación (oculto inicialmente) -->
+  <div id="app-container" style="display: none;">
+    <h1>Calculadora de Mezcla NPK</h1>
+    <form id="formulario">
+      <label for="nitrogeno">Nitrógeno (N):</label>
+      <input type="number" id="nitrogeno" name="nitrogeno" min="0" max="100" required>
+
+      <label for="fosforo">Fósforo (P):</label>
+      <input type="number" id="fosforo" name="fosforo" min="0" max="100" required>
+
+      <label for="potasio">Potasio (K):</label>
+      <input type="number" id="potasio" name="potasio" min="0" max="100" required>
+
+      <label>Materias Primas:</label>
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" name="materias" value="PURIN">
+          <span class="icon">🐖</span> PURIN
+        </label>
+        <label>
+          <input type="checkbox" name="materias" value="GALLINAZA">
+          <span class="icon">🐔</span> GALLINAZA
+        </label>
+        <label>
+          <input type="checkbox" name="materias" value="COMPOST">
+          <span class="icon">🌱</span> COMPOST
+        </label>
+        <label>
+          <input type="checkbox" name="materias" value="FOSFATO">
+          <span class="icon">⚪</span> FOSFATO
+        </label>
+        <label>
+          <input type="checkbox" name="materias" value="POTASA">
+          <span class="icon">🌫️</span> POTASA
+        </label>
+        <label>
+          <input type="checkbox" name="materias" value="HARINA DE CARNE">
+          <span class="icon">🍖</span> HARINA DE CARNE
+        </label>
+      </div>
+
+      <button type="submit">Calcular</button>
+    </form>
+
+    <div id="resultado"></div>
+
+    <footer>
+      © 2023 Tu Empresa Ecológica
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
